@@ -11,7 +11,7 @@ int main()
         cin>>a[i];
         int l=top;
         while(l>=0)
-        {
+        { 
             if(a[i]==set[l])
             {
                 break;
