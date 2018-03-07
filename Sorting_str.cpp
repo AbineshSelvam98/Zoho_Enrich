@@ -46,9 +46,4 @@ int main()
     {
         cout<<pos[i]<<"  ";
     }
-    
-    
-  
-
-
 }
