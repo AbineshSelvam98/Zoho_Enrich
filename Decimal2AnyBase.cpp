@@ -13,7 +13,6 @@ int main()
     char b[100];          //Charecter array 'b' is used for storing values which are greater than 9 
     while(n)
     {
-
         int temp=n%base;
         if(temp<10)
         {
@@ -26,8 +25,7 @@ int main()
             b[i++]=x;
         }
         n=n/base;
-        
-    }
+     }
     for(int j=i-1;j>=0;j--)   
     {
         if(a[j]!=-1)
