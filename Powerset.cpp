@@ -1,18 +1,18 @@
 #include<iostream>
 using namespace std;
 void Generator(int set[10],int checklist[10],int beg,int remain,int n)
-{
-    
-	if(remain==0)// remain is the remaing elements to be taken in the subset
+{    
+	if(remain==0)// remain is denote the remaing elements to be taken in the subset
 	{
-	    for(int i=0;i<n;i++)
-		{
+		cout<<"{";
+	 	for(int i=0;i<n;i++)
+		{    	
 			if(checklist[i]==1)// we are printing only the selected elements in the checklist
 			{
 				cout<<set[i]<<",";
 			}
 		}
-		cout<<endl;
+		cout<<"}"<<endl;
 	}
 	else
 	{
