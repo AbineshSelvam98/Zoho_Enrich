@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void TruthtableGenerator(int table[32][6],int var) // This Function Generates the truth Table based  on variable count
+void TruthtableGenerator(int table[256][10],int var) // This Function Generates the truth Table based  on variable count
 {
 
     int k=1<<var-1;
@@ -20,7 +20,7 @@ void TruthtableGenerator(int table[32][6],int var) // This Function Generates th
     
     }
 }
-void printer(int table[31][6],int var)//This function is used to display the truthtable with output
+void printer(int table[256][10],int var)//This function is used to display the truthtable with output
 {
     for(int i=0;i<2<<var-1;i++)
     {
@@ -31,7 +31,7 @@ void printer(int table[31][6],int var)//This function is used to display the tru
         cout<<endl;
     }
 }
-void evaluator(int table[32][6],string exp,int var, int row)//This function  used to evaluate the given expression for particular row
+void evaluator(int table[256][10],string exp,int var, int row)//This function  used to evaluate the given expression for particular row
 {
     int top=-1;
     char stack[10];
@@ -136,7 +136,7 @@ int main()
 {
     string exp;
     cin>>exp;
-    int var=0,table[32][6];
+    int var=0,table[256][6];
     for(int i=0;i<exp.length();i++)
     {
         if(exp[i]>='A'&&exp[i]<='Z')
