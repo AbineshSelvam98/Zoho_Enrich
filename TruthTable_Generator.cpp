@@ -41,7 +41,7 @@ void evaluator(int table[256][10],string exp,int var, int row)//This function  u
         {
             stack[++top]=exp[i];
         }
-        else if((exp[i]=='+'||exp[i]=='.')&&exp[i+1]=='(')
+        else if((exp[i]=='+'||exp[i]=='.'||exp[i]=='^')&&exp[i+1]=='(')
         {
             stack[++top]=exp[i];
             i++;
@@ -136,7 +136,7 @@ int main()
 {
     string exp;
     cin>>exp;
-    int var=0,table[256][6];
+    int var=0,table[256][10];
     for(int i=0;i<exp.length();i++)
     {
         if(exp[i]>='A'&&exp[i]<='Z')
