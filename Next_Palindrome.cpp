@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string> // for integer  to string conversion --> to_string()
-#include<algorithm>
+#include<algorithm> // for reversing
 using namespace std;
 int check(string a,int l) //to check all the whether all digits in left part of a number is 9
 {
@@ -50,7 +50,6 @@ int next_palindrome(string a,int l)
         {
             mid="0";
         }
-        
     }
     if(check(left,l/2))
     {
@@ -68,8 +67,8 @@ int next_palindrome(string a,int l)
         pal_num=stoi(left+mid+right);
         return pal_num;
     }
-
 }
+
 int main()
 {
     int num,l;
@@ -79,5 +78,4 @@ int main()
     l=a.length();
     int pal_num=next_palindrome(a,l);//function to find the next palindrome
     cout<<pal_num;
-    
 }
